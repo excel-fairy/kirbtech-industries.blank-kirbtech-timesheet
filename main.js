@@ -3,6 +3,7 @@ function exportWeeklyTimeSheet(){
         exportFolderId: null, // Will export in same directory as the spreadsheet
         sheetId: WEEKLY_TIME_SHEET.sheet.getSheetId(),
         exportFileName: "Weekly time sheet",
+        portrait: false,
         range: WEEKLY_TIME_SHEET.exportRange
     };
     var pdfFile = ExportSpreadsheet.export(exportOptions);
