@@ -1,6 +1,6 @@
 function exportWeeklyTimeSheet(){
     var exportOptions = {
-        exportFolderId: null, // Will export in same directory as the spreadsheet
+        exportFolderId: DATA_VALID_SHEET.sheet.getRange(DATA_VALID_SHEET.exportFolderIdCell).getValue(),
         sheetId: WEEKLY_TIME_SHEET.sheet.getSheetId(),
         exportFileName: "Weekly time sheet",
         portrait: false,
@@ -8,7 +8,6 @@ function exportWeeklyTimeSheet(){
     };
     var pdfFile = ExportSpreadsheet.export(exportOptions);
     sendEmail(WEEKLY_TIME_SHEET.sheet, pdfFile);
-    pdfFile.setTrashed(true);
 }
 
 function sendEmail(sheet, attachment) {

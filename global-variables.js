@@ -17,5 +17,6 @@ var DATA_VALID_SHEET = {
         recipientEmailAddressCell: 'B2',
         subjectCell: 'B3',
         messageCell: 'B4'
-    }
+    },
+    exportFolderIdCell: 'B6'
 };
